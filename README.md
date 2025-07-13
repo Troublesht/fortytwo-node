@@ -1,47 +1,78 @@
-# ⚡ Fortytwo Node – Easy Docker Setup
+✅ Full README.md
+markdown
+Copy
+Edit
+# 🧠 Fortytwo Node – Dockerized GPU Setup
 
-Run the [Fortytwo Console App](https://fortytwo.network) on any machine (Windows, macOS, Linux) with GPU using Docker or QuickPod.io.
+Run a Fortytwo Node with GPU support in one command—on **Windows, macOS, Linux**, or with **QuickPod.io** cloud GPU.
+
+---
+
+## ✨ Features
+
+- ✅ Installs all required packages
+- ✅ Auto-checks and fixes CUDA if missing
+- ✅ Runs `./linux.sh` automatically
+- ✅ Works on Docker Desktop (Windows/Mac/Linux) with NVIDIA GPUs
+- ✅ Deploy to cloud with one button using QuickPod
 
 ---
 
 ## 🐳 Run Locally with Docker
 
-### 1. 📦 Install Docker
+### Step 1: Install Docker
 
-| OS      | How to Install                                  |
-|---------|--------------------------------------------------|
-| 🪟 Windows | [Download Docker Desktop](https://www.docker.com/products/docker-desktop) |
-| 🍎 macOS   | [Download Docker Desktop](https://www.docker.com/products/docker-desktop) |
-| 🐧 Linux   | Run in terminal:<br>`sudo apt install docker.io -y` |
+- **Windows / Mac:** Install [Docker Desktop](https://www.docker.com/products/docker-desktop)
+- **Linux:** Run:
+  ```bash
+  sudo apt update
+  sudo apt install docker.io -y
+And ensure NVIDIA drivers + NVIDIA Container Toolkit are installed for GPU support.
 
-### 2. 🚀 Run Fortytwo Node
-
-Once Docker is installed, run this in your terminal:
-
-```bash
+Step 2: Launch the Fortytwo node:
+bash
+Copy
+Edit
 docker run -it --rm --gpus all troublesht/fortytwo-node
+✅ That’s It! 🎉
+This will:
 
----
+Install all packages (at build time)
 
-## 🚀 Run with QuickPod.io
+Fix CUDA if needed (via nvcc check)
 
-You can run this Fortytwo node with GPU directly using [QuickPod.io](https://quickpod.io):
+Automatically start the Fortytwo application (./linux.sh)
 
-### 🧠 Steps:
-1. Go to [console.quickpod.io/templates](https://console.quickpod.io/templates)
-2. Create a new Docker Template:
-   - **Image**: `troublesht/fortytwo-node`
-   - **Command**: `./linux.sh`
-   - **Enable GPU**: ✅ Yes
-3. Click **Deploy**
+🚀 Run with QuickPod.io (Cloud GPU)
+You can run your node with GPU in the cloud—no local setup required.
 
-That’s it! 🎉  
-The container will:
-- Install all dependencies
-- Check and fix CUDA if needed
-- Automatically run the Fortytwo app
+QuickPod Setup:
+Go to QuickPod Templates
 
+Click Create New Template
 
+Fill in:
 
+Image: troublesht/fortytwo-node
 
+Command: ./linux.sh
+
+✅ Enable GPU
+
+Click Deploy
+
+Once pod starts, open its terminal and run:
+
+bash
+Copy
+Edit
+./linux.sh
+Your node runs inside a GPU-enabled container automatically.
+
+⚙️ How It Works
+Dockerfile starts from CUDA base, installs dependencies, and sets CMD ["./linux.sh"]
+
+Includes a check/fix for missing CUDA (via nvcc)
+
+Built automatically with GitHub Actions on each commit to main
 
