@@ -20,3 +20,23 @@ Open a terminal or PowerShell and run:
 
 ```bash
 docker run -it --rm --gpus all troublesht/fortytwo-node
+
+That’s it! 🎉
+It will:
+
+Install dependencies
+
+Fix CUDA if needed
+
+Launch the Fortytwo app
+
+🧠 Optional: Use on QuickPod.io
+Go to: console.quickpod.io/templates
+
+Add a new Docker template:
+
+Image: troublesht/fortytwo-node
+
+Command: ./linux.sh
+
+Enable GPU and deploy
