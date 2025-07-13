@@ -1,42 +1,22 @@
-# 📦 Fortytwo Node - Easy Setup (Docker)
+# ⚡ Fortytwo Node – Easy Docker Setup
 
-Run the [Fortytwo Console App](https://fortytwo.network) in **one command** on any system using Docker.
-
----
-
-## ✅ Step 1: Install Docker
-
-| System  | How to Install |
-|---------|----------------|
-| **Windows** | [Download Docker Desktop](https://www.docker.com/products/docker-desktop) and install |
-| **macOS**   | [Download Docker Desktop](https://www.docker.com/products/docker-desktop) |
-| **Linux**   | Run: `sudo apt install docker.io -y` |
+Run the [Fortytwo Console App](https://fortytwo.network) on any machine (Windows, macOS, Linux) with GPU using Docker or QuickPod.io.
 
 ---
 
-## 🚀 Step 2: Run the Node
+## 🐳 Run Locally with Docker
 
-Open a terminal or PowerShell and run:
+### 1. 📦 Install Docker
+
+| OS      | How to Install                                  |
+|---------|--------------------------------------------------|
+| 🪟 Windows | [Download Docker Desktop](https://www.docker.com/products/docker-desktop) |
+| 🍎 macOS   | [Download Docker Desktop](https://www.docker.com/products/docker-desktop) |
+| 🐧 Linux   | Run in terminal:<br>`sudo apt install docker.io -y` |
+
+### 2. 🚀 Run Fortytwo Node
+
+Once Docker is installed, run this in your terminal:
 
 ```bash
 docker run -it --rm --gpus all troublesht/fortytwo-node
-
-That’s it! 🎉
-It will:
-
-Install dependencies
-
-Fix CUDA if needed
-
-Launch the Fortytwo app
-
-🧠 Optional: Use on QuickPod.io
-Go to: console.quickpod.io/templates
-
-Add a new Docker template:
-
-Image: troublesht/fortytwo-node
-
-Command: ./linux.sh
-
-Enable GPU and deploy
