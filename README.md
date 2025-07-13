@@ -1,21 +1,22 @@
-# Fortytwo Node Capsule (GPU-Enabled)
+# 📦 Fortytwo Node - Easy Setup (Docker)
 
-Run your [Fortytwo Network](https://fortytwo.network) node in a container with GPU support.  
-Fully compatible with [Quickpod.io](https://quickpod.io), Docker, or native setup.
-
----
-
-## 🔧 Features
-
-- ✅ CUDA 12.4+ check and install
-- ✅ Fortytwo Node auto-install
-- ✅ Capsule launches on start
-- ✅ Dockerized & GPU-enabled
-- ✅ No GitHub login required
+Run the [Fortytwo Console App](https://fortytwo.network) in **one command** on any system using Docker.
 
 ---
 
-## 🚀 Quick Start (Docker)
+## ✅ Step 1: Install Docker
+
+| System  | How to Install |
+|---------|----------------|
+| **Windows** | [Download Docker Desktop](https://www.docker.com/products/docker-desktop) and install |
+| **macOS**   | [Download Docker Desktop](https://www.docker.com/products/docker-desktop) |
+| **Linux**   | Run: `sudo apt install docker.io -y` |
+
+---
+
+## 🚀 Step 2: Run the Node
+
+Open a terminal or PowerShell and run:
 
 ```bash
-docker run --gpus all troublesht/fortytwo-node
+docker run -it --rm --gpus all troublesht/fortytwo-node
