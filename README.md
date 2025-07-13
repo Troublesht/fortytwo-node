@@ -28,7 +28,10 @@ Run a Fortytwo Node with GPU support in one command—on **Windows, macOS, Linux
 And ensure NVIDIA drivers + NVIDIA Container Toolkit are installed for GPU support.
 
 Step 2: Launch the Fortytwo node:
+```bash
 docker run -it --rm --gpus all troublesht/fortytwo-node
+```
+
 
 ✅ That’s It! 🎉
 This will:
@@ -49,17 +52,17 @@ Click Create New Template
 
 Fill in:
 
-Image: troublesht/fortytwo-node
+Docker Image Path: troublesht/fortytwo-node
 
 
 ✅ Enable GPU
 
 Click Deploy
 
-Once pod starts, open its terminal and run:
-
+Once pod starts, open its terminal and run, (You can also connect it using ssh and run) :
+ ```bash
 ./linux.sh
-
+```
 
 Your node runs inside a GPU-enabled container automatically.
 
