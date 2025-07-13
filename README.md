@@ -1,7 +1,5 @@
 ✅ Full README.md
-markdown
-Copy
-Edit
+
 # 🧠 Fortytwo Node – Dockerized GPU Setup
 
 Run a Fortytwo Node with GPU support in one command—on **Windows, macOS, Linux**, or with **QuickPod.io** cloud GPU.
@@ -30,10 +28,8 @@ Run a Fortytwo Node with GPU support in one command—on **Windows, macOS, Linux
 And ensure NVIDIA drivers + NVIDIA Container Toolkit are installed for GPU support.
 
 Step 2: Launch the Fortytwo node:
-bash
-Copy
-Edit
 docker run -it --rm --gpus all troublesht/fortytwo-node
+
 ✅ That’s It! 🎉
 This will:
 
@@ -55,7 +51,6 @@ Fill in:
 
 Image: troublesht/fortytwo-node
 
-Command: ./linux.sh
 
 ✅ Enable GPU
 
@@ -63,10 +58,9 @@ Click Deploy
 
 Once pod starts, open its terminal and run:
 
-bash
-Copy
-Edit
 ./linux.sh
+
+
 Your node runs inside a GPU-enabled container automatically.
 
 ⚙️ How It Works
@@ -76,3 +70,16 @@ Includes a check/fix for missing CUDA (via nvcc)
 
 Built automatically with GitHub Actions on each commit to main
 
+📎 Useful Links
+
+| Resource         | Link                                                                                                   |
+| ---------------- | ------------------------------------------------------------------------------------------------------ |
+| Fortytwo Docs    | [https://docs.fortytwo.network](https://docs.fortytwo.network)                                         |
+| QuickPod Console | [https://console.quickpod.io/templates](https://console.quickpod.io/templates)                         |
+| Docker Hub Repo  | [https://hub.docker.com/r/troublesht/fortytwo-node](https://hub.docker.com/r/troublesht/fortytwo-node) |
+| Support          | Open an issue or join [Fortytwo Discord](https://discord.gg/fortytwo)                                  |
+
+👥 Contributions
+Fork this repo to make changes or improvements. Pull requests welcome!
+
+Maintainer: Troublesht
